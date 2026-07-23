@@ -12,6 +12,88 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
+  <!-- Dados Estruturados (JSON-LD) para SEO Local -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://maufetelas.com.br/#organization",
+          "name": "Maufe Telas",
+          "url": "https://maufetelas.com.br",
+          "logo": "https://maufetelas.com.br/referencias/imagens/C_Logo-Maufe-600px.png",
+          "image": "https://maufetelas.com.br/referencias/imagens/GatoTela.jpg",
+          "description": "Proteja sua família, seus pets e seu lar contra quedas e insetos. Redes de proteção certificadas e telas mosquiteiras sob medida em todo o Mato Grosso do Sul. Orçamento rápido via WhatsApp em até 12 minutos.",
+          "telephone": "+5567991355250",
+          "email": "contato@maufetelas.com.br",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Campo Grande",
+            "addressRegion": "MS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-20.4697",
+            "longitude": "-54.6201"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Mato Grosso do Sul"
+            },
+            {
+              "@type": "City",
+              "name": "Campo Grande"
+            },
+            {
+              "@type": "City",
+              "name": "Dourados"
+            },
+            {
+              "@type": "City",
+              "name": "Três Lagoas"
+            }
+          ],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://maufetelas.com.br/#service-redes",
+          "name": "Instalação de Redes de Proteção",
+          "provider": {
+            "@id": "https://maufetelas.com.br/#organization"
+          },
+          "description": "Redes de proteção certificadas conforme ABNT NBR 16046 para janelas, sacadas, quintais, quadras esportivas e gatis.",
+          "areaServed": "Mato Grosso do Sul"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://maufetelas.com.br/#service-telas",
+          "name": "Instalação de Telas Mosquiteiras",
+          "provider": {
+            "@id": "https://maufetelas.com.br/#organization"
+          },
+          "description": "Telas mosquiteiras sob medida em perfis de alumínio e fibra de vidro, incluindo tela Pet Screen ultra resistente contra rasgos de animais.",
+          "areaServed": "Mato Grosso do Sul"
+        }
+      ]
+    }
+  </script>
+
   <!-- Barra de Navegação Flutuante -->
   <Navbar />
 
