@@ -2,7 +2,7 @@
 
 Este documento explica como o Google Tag Manager (GTM) deve ser integrado ao novo site desenvolvido em Astro.
 
-A tag configurada para o projeto é: **GTM-MFS6LK9M**.
+A tag configurada para o projeto é: **GTM-K97TQB9**.
 
 ---
 
@@ -28,7 +28,7 @@ Deve ser posicionado o mais alto possível dentro da tag `<head>` do arquivo [La
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MFS6LK9M');</script>
+})(window,document,'script','dataLayer','GTM-K97TQB9');</script>
 <!-- End Google Tag Manager -->
 ```
 
@@ -39,7 +39,7 @@ Deve ser posicionado imediatamente após a abertura da tag `<body>` no arquivo [
 
 ```html
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFS6LK9M"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K97TQB9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 ```
@@ -59,7 +59,7 @@ No arquivo [Layout.astro](file:///d:/Projetos/Paginas/maufetelas/src/layouts/Lay
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MFS6LK9M');</script>
+    })(window,document,'script','dataLayer','GTM-K97TQB9');</script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8" />
@@ -68,7 +68,7 @@ No arquivo [Layout.astro](file:///d:/Projetos/Paginas/maufetelas/src/layouts/Lay
   </head>
   <body class="...">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFS6LK9M"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K97TQB9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -84,4 +84,4 @@ No arquivo [Layout.astro](file:///d:/Projetos/Paginas/maufetelas/src/layouts/Lay
 Uma vez inserido o código:
 1. Abra o site em ambiente de desenvolvimento (`npm run dev`) ou produção.
 2. Utilize a extensão oficial **Tag Assistant Companion** do Chrome ou entre no modo Preview no painel do seu Google Tag Manager (GTM).
-3. Verifique se o container `GTM-MFS6LK9M` está disparando corretamente.
+3. Verifique se o container `GTM-K97TQB9` está disparando corretamente.
