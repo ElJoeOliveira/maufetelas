@@ -5,18 +5,32 @@ interface Props {
   title?: string;
   description?: string;
   keywords?: string;
+  ogImage?: string;
+  robots?: string;
 }
 
 const {
   title = "Maufe Telas | Redes de Proteção e Telas Mosquiteiras em Mato Grosso do Sul",
   description = "Proteja sua família, seus pets e seu lar contra quedas e insetos. Redes de proteção certificadas e telas mosquiteiras sob medida em todo o Mato Grosso do Sul. Orçamento rápido via WhatsApp em até 12 minutos.",
-  keywords = "redes de proteção Campo Grande MS, telas mosquiteiras, proteção para gatos, redes de proteção para sacadas, tela pet screen, proteção contra pombos"
+  keywords = "redes de proteção Campo Grande MS, telas mosquiteiras, proteção para gatos, redes de proteção para sacadas, tela pet screen, proteção contra pombos",
+  ogImage = "/referencias/imagens/C_Logo-Maufe-600px.png",
+  robots = "index, follow"
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://maufetelas.com.br');
+const ogImageURL = new URL(ogImage, Astro.site || 'https://maufetelas.com.br');
 ---
 
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MFS6LK9M');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -25,6 +39,24 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content="Maufe Telas" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageURL} />
 
     <!-- Google Fonts: Outfit (Títulos) e Plus Jakarta Sans (Texto de Apoio) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +64,10 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   </head>
   <body class="min-h-screen flex flex-col font-sans bg-white antialiased overflow-x-hidden">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFS6LK9M"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <slot />
   </body>
 </html>
