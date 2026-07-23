@@ -1,17 +1,44 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/maufetelas/Hero.astro';
+import Conceito from '../components/maufetelas/Conceito.astro';
+import Solutions from '../components/maufetelas/Solutions.astro';
+import Testimonials from '../components/maufetelas/Testimonials.astro';
+import FAQ from '../components/maufetelas/FAQ.astro';
+import RegionalEscopo from '../components/maufetelas/RegionalEscopo.astro';
+import ClosingCTA from '../components/maufetelas/ClosingCTA.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <!-- Barra de Navegação Flutuante -->
+  <Navbar />
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Seção Hero (Acima da Dobra) -->
+    <Hero />
+
+    <!-- Bloco Destaque / Transição Emocional -->
+    <Conceito />
+
+    <!-- Grade de Soluções (Redes de Proteção e Telas Mosquiteiras) -->
+    <Solutions />
+
+    <!-- Seção Prova Social, Orçamento Expresso e Clientes Corporativos -->
+    <Testimonials />
+
+    <!-- Seção de FAQs / Principais Dúvidas -->
+    <FAQ />
+
+    <!-- Escopo Regional de Atendimento -->
+    <RegionalEscopo />
+
+    <!-- CTA de Fechamento / Impacto Emocional -->
+    <ClosingCTA />
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <Footer />
+</Layout>

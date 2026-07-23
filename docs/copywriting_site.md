@@ -293,8 +293,8 @@ Este documento apresenta a estrutura completa de conteúdo para o novo site da *
 *   **E-mail:** contato@maufetelas.com.br
 *   **CNPJ:** 44.776.352/0001-09
 *   **Certificações/Selo:** Certificado de SSL Seguro (`referencias/imagens/C_SSLSeguro-300x50.png` ou `C_SSLSeguro.png`)
-*   **Links de Rodapé:** Política de Privacidade | Termos de Uso
-*   **Créditos de Desenvolvimento:** Desenvolvido por [AnuncieCerto](https://anunciecerto.com.br)
+*   **Links de Rodapé:** <a href="/politica-de-privacidade" target="_blank">Política de Privacidade</a> | <a href="/termos-de-uso" target="_blank">Termos de Uso</a> (Ambos devem abrir em nova aba)
+*   **Créditos de Desenvolvimento:** Desenvolvido por <a href="https://anunciecerto.com.br/" target="_blank" style="color: #ff9900;">Anuncie Certo</a> (Deve abrir em nova aba com a cor especificada)
 *   **Link Discreto:** Retornar ao Topo (Scroll suave para `#home`).
 
 ---
@@ -331,3 +331,20 @@ Este documento apresenta a estrutura completa de conteúdo para o novo site da *
 *   **Opção B (Foco em Conveniência):**
     *   *Texto:* SOLICITAR PROJETO PERSONALIZADO GRÁTIS
     *   *Racional:* Reduz o atrito comercial ao usar a palavra "grátis" e evocar exclusividade ("projeto personalizado").
+
+---
+
+## 17. Paleta de Cores e Identidade Visual
+
+### Paleta de Cores do Site Antigo (Referência)
+*   **Branco:** `#FFFFFF`
+*   **Fundo Aguado:** `#F0FDFF`
+*   **Azul Claro:** `#4CC6E6`
+*   **Azul Intermediário:** `#24ABDC`
+*   **Azul Escuro:** `#2A568A`
+*   **Verde - CTA Escuro:** `#007809`
+*   **Verde - CTA Claro:** `#03C812`
+
+### Diretrizes para o Novo Layout
+*   **Tom de Azul:** Manter o tom de azul predominante na identidade da marca. Não há necessidade de usar exatamente as mesmas cores antigas, permitindo a criação de uma nova paleta moderna que mantenha similaridade.
+*   **Criatividade:** Liberdade total para criar e propor uma nova paleta de cores otimizada, dinâmica e com estética premium (utilizando nuances de azul harmoniosas, contrastes nítidos e acentos vibrantes para os CTAs).

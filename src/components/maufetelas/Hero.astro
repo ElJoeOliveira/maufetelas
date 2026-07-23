@@ -1,0 +1,110 @@
+---
+---
+
+<section 
+  id="home" 
+  class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-dark pt-20"
+>
+  <!-- Imagem de Fundo com Overlays -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/referencias/imagens/GatoTela.jpg" 
+      alt="Gato seguro próximo a janela com rede de proteção" 
+      class="w-full h-full object-cover object-center scale-105 animate-subtle-zoom"
+    />
+    <!-- Gradiente escuro para legibilidade e profundidade -->
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/30"></div>
+  </div>
+
+  <!-- Partículas sutis no fundo (efeito premium) -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none z-1 bg-[radial-gradient(#1d4ed8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20 text-white">
+    <div class="max-w-2xl lg:max-w-3xl space-y-8">
+      
+      <!-- Selo de Destaque com micro-animação -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-blue/15 border border-brand-blue/35 text-brand-blue font-semibold text-xs tracking-wider uppercase animate-fade-in-down">
+        <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+        Instalação em Todo MS • Normas ABNT
+      </div>
+
+      <!-- Títulos com atrasos de animação (Staggered Load) -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display leading-[1.1] tracking-tight animate-fade-in-up [animation-delay:200ms]">
+        Proteção real para quem <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-cyan-400">você mais ama</span>.
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-300 font-sans leading-relaxed animate-fade-in-up [animation-delay:400ms]">
+        Redes de proteção certificadas e telas mosquiteiras sob medida que protegem sua família e seus pets sem comprometer a estética do seu lar.
+      </p>
+
+      <!-- CTA Principal e Benefício Secundário -->
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-4 animate-fade-in-up [animation-delay:600ms]">
+        <a 
+          href="https://api.whatsapp.com/send?phone=5567991355250&text=%5BM1%5D%20Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20Telas." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-brand-green hover:bg-brand-green/90 hover:shadow-[0_0_25px_rgba(16,185,129,0.45)] hover:scale-102 rounded-xl transition-all duration-300 shadow-md group"
+        >
+          <!-- Ícone SVG WhatsApp -->
+          <svg class="h-6 w-6 fill-current transition-transform group-hover:rotate-12" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.638 2.012 14.17 1 11.582 1 6.139 1 1.716 5.367 1.712 10.797c-.001 1.748.461 3.453 1.337 4.97l-1.013 3.7 3.793-.984c1.503.812 3.025 1.24 4.538 1.241zM18.84 15.63c-.316-.156-1.872-.911-2.16-.1.015-.288-.203-.423-.55-.6-1.127-.58-1.92-1.637-2.316-2.1-.122-.14-.03-.218.062-.312.082-.085.186-.218.278-.327.09-.11.12-.19.18-.31.06-.12.03-.229-.015-.316-.045-.09-.413-1.004-.567-1.37-.152-.36-.312-.313-.423-.318-.11-.005-.236-.005-.36-.005-.124 0-.328.046-.5.234-.173.188-.66.645-.66 1.573 0 .928.683 1.826.778 1.953.095.127 1.343 2.023 3.25 2.83 1.79.757 2.155.607 2.542.573.387-.034 1.244-.503 1.418-.99.172-.487.172-.904.122-.99-.05-.085-.184-.136-.5-.292z" />
+          </svg>
+          SOLICITAR ORÇAMENTO VIA WHATSAPP
+        </a>
+        <div class="text-xs text-gray-400 max-w-[200px] leading-snug">
+          <span class="text-brand-green font-bold block">Orçamento Rápido</span> em até 12 minutos via WhatsApp
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Custom Animations for Hero Section */
+  @keyframes subtle-zoom {
+    0% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1.08);
+    }
+  }
+
+  .animate-subtle-zoom {
+    animation: subtle-zoom 20s infinite alternate ease-in-out;
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in-down {
+    opacity: 0;
+    animation: fade-in-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+</style>
