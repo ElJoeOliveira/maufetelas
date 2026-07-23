@@ -27,17 +27,26 @@ const clientesLogos = [
   { src: "/referencias/clientes/Estoril.jpg.webp", alt: "Estoril" },
   { src: "/referencias/clientes/Paris6.jpg.webp", alt: "Paris 6" },
   { src: "/referencias/clientes/IFMS.jpg.webp", alt: "IFMS" },
+  { src: "/referencias/clientes/Funcional.jpg.webp", alt: "Funcional" },
+  { src: "/referencias/clientes/Hook.jpg.webp", alt: "Hook" },
+  { src: "/referencias/clientes/Ponto-alto.jpg.webp", alt: "Ponto Alto" },
+  { src: "/referencias/clientes/QuartaIgreja.jpg.webp", alt: "Quarta Igreja" },
+  { src: "/referencias/clientes/NascenteAzul.jpg.webp", alt: "Nascente Azul" }
+];
+
+const construtorasLogos = [
   { src: "/referencias/condominios/Damha.jpg.webp", alt: "Damha" },
   { src: "/referencias/condominios/Plaenge.jpg.webp", alt: "Plaenge" },
   { src: "/referencias/condominios/Vanguard2.jpg.webp", alt: "Vanguard" },
   { src: "/referencias/condominios/Alphaville2.jpg.webp", alt: "Alphaville" },
-  { src: "/referencias/condominios/MRV.jpg.webp", alt: "MRV" }
+  { src: "/referencias/condominios/MRV.jpg.webp", alt: "MRV" },
+  { src: "/referencias/condominios/Tecol.jpg.webp", alt: "Tecol" }
 ];
 ---
 
 <div class="space-y-0">
   
-  <!-- 1. Coleção de Elogios (Carrossel Horizontal Infinito/Marquee) -->
+  <!-- 1. Coleção de Elogios (Carrossel Horizontal Infinito - Linha Única) -->
   <section class="bg-brand-light py-20 overflow-hidden relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center space-y-4">
       <span class="text-xs font-semibold tracking-wider text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full">
@@ -51,69 +60,47 @@ const clientesLogos = [
       </p>
     </div>
 
-    <!-- Marquise Infinita (Duas linhas rodando em direções opostas) -->
-    <div class="flex flex-col gap-6 relative z-10 select-none">
-      
-      <!-- Linha 1: Sentido Normal -->
+    <!-- Marquise Infinita (Linha Única) -->
+    <div class="flex flex-col gap-6 relative z-10 select-none w-full">
       <div class="flex overflow-hidden w-full relative">
-        <div class="flex gap-6 animate-marquee whitespace-nowrap hover:[animation-play-state:paused]">
-          {elogios.slice(0, 12).map((src) => (
+        <div class="flex gap-6 animate-marquee whitespace-nowrap hover:[animation-play-state:paused] py-2">
+          {elogios.map((src) => (
             <div class="inline-block w-64 h-auto shrink-0 bg-white p-2 rounded-xl shadow-md border border-gray-100/50">
               <img src={src} alt="Elogio de cliente" class="w-full h-auto object-cover rounded-lg pointer-events-none" />
             </div>
           ))}
-          <!-- Duplicado para efeito de loop infinito -->
-          {elogios.slice(0, 12).map((src) => (
+          <!-- Duplicado para loop infinito de rolagem suave -->
+          {elogios.map((src) => (
             <div class="inline-block w-64 h-auto shrink-0 bg-white p-2 rounded-xl shadow-md border border-gray-100/50">
               <img src={src} alt="Elogio de cliente" class="w-full h-auto object-cover rounded-lg pointer-events-none" />
             </div>
           ))}
         </div>
       </div>
-
-      <!-- Linha 2: Sentido Reverso -->
-      <div class="flex overflow-hidden w-full relative">
-        <div class="flex gap-6 animate-marquee-reverse whitespace-nowrap hover:[animation-play-state:paused]">
-          {elogios.slice(12).map((src) => (
-            <div class="inline-block w-64 h-auto shrink-0 bg-white p-2 rounded-xl shadow-md border border-gray-100/50">
-              <img src={src} alt="Elogio de cliente" class="w-full h-auto object-cover rounded-lg pointer-events-none" />
-            </div>
-          ))}
-          <!-- Duplicado para efeito de loop infinito -->
-          {elogios.slice(12).map((src) => (
-            <div class="inline-block w-64 h-auto shrink-0 bg-white p-2 rounded-xl shadow-md border border-gray-100/50">
-              <img src={src} alt="Elogio de cliente" class="w-full h-auto object-cover rounded-lg pointer-events-none" />
-            </div>
-          ))}
-        </div>
-      </div>
-
     </div>
 
-    <!-- Gradientes de fade nas laterais para suavizar o corte -->
+    <!-- Gradientes de fade nas laterais -->
     <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-brand-light to-transparent z-20 pointer-events-none"></div>
     <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-brand-light to-transparent z-20 pointer-events-none"></div>
   </section>
 
   <!-- 2. Seção de Agilidade (Orçamento Rápido) -->
   <section class="bg-brand-dark text-white py-16 relative overflow-hidden">
-    <!-- Fundo estilizado com gradiente moderno -->
     <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-dark/95 to-brand-blue/30 z-0"></div>
-    <!-- Luz circular decorativa -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-3xl pointer-events-none z-0"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 border border-brand-green/30 text-brand-green text-xs font-semibold tracking-wide uppercase">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/20 border border-brand-blue/30 text-brand-blue text-xs font-semibold tracking-wide uppercase">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
         Compromisso Velocidade
       </span>
       <h2 class="text-3xl md:text-5xl font-extrabold font-display tracking-tight max-w-3xl mx-auto leading-tight">
-        Seu atendimento inicial pelo WhatsApp em até <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-400">12 minutinhos</span>.
+        Seu atendimento inicial pelo WhatsApp em até <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-cyan-400">12 minutinhos</span>.
       </h2>
       <p class="text-lg text-gray-300 max-w-xl mx-auto font-sans">
-        Você duvida? <span class="font-bold underline decoration-brand-green underline-offset-4 decoration-2">Clique e confira!</span>
+        Você duvida? <span class="font-bold underline decoration-brand-blue underline-offset-4 decoration-2">Clique e confira!</span>
       </p>
       
       <div class="pt-4">
@@ -121,7 +108,7 @@ const clientesLogos = [
           href="https://api.whatsapp.com/send?phone=5567991355250&text=%5BM3%5D%20Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20Telas." 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-brand-green hover:bg-brand-green/90 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:scale-102 rounded-xl transition-all duration-300 group"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-brand-blue hover:bg-brand-blue/90 hover:shadow-[0_0_30px_rgba(29,78,216,0.5)] hover:scale-102 rounded-xl transition-all duration-300 group"
         >
           ORÇAMENTO RÁPIDO VIA WHATSAPP
         </a>
@@ -133,19 +120,15 @@ const clientesLogos = [
     </div>
   </section>
 
-  <!-- 3. Seção Google Reviews ("E lá no Google?") -->
+  <!-- 3. Seção Google Reviews -->
   <section id="depoimentos" class="bg-white py-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <!-- Cabeçalho Google Reviews -->
       <div class="flex flex-col items-center justify-center text-center space-y-4">
-        <!-- Logo Google Estilizado e Estrelas -->
         <div class="flex flex-col items-center gap-2">
-          <!-- Ícone Google Simplificado -->
           <svg class="h-8 w-8" viewBox="0 0 24 24">
             <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.578-7.859-8s3.53-8 7.859-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.107C18.29 1.945 15.485 1 12.24 1 6.06 1 1.05 6.01 1.05 12.2s5.01 11.2 11.19 11.2c6.45 0 10.74-4.52 10.74-10.92 0-.74-.08-1.305-.18-1.855H12.24z"/>
           </svg>
-          <!-- Estrelas de Avaliação -->
           <div class="flex gap-1 text-yellow-400">
             {Array.from({ length: 5 }).map(() => (
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 20 20">
@@ -163,15 +146,12 @@ const clientesLogos = [
         </p>
       </div>
 
-      <!-- Depoimentos Grade (Google Reviews) -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {depoimentosGoogle.map((d) => (
           <div class="bg-brand-light p-8 rounded-2xl border border-brand-blue/5 shadow-sm hover:shadow-md hover:border-brand-blue/15 transition-all duration-300 relative flex flex-col justify-between">
-            <!-- Aspas Decorativas -->
             <span class="absolute -top-3 left-6 text-brand-blue/10 text-6xl font-serif pointer-events-none">“</span>
             
             <div class="space-y-4 relative z-10">
-              <!-- Estrelinhas do Card -->
               <div class="flex gap-0.5 text-yellow-400">
                 {Array.from({ length: 5 }).map(() => (
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 20 20">
@@ -185,7 +165,6 @@ const clientesLogos = [
             </div>
 
             <div class="pt-6 mt-6 border-t border-gray-200/50 flex items-center gap-3">
-              <!-- Avatar Placeholder com Iniciais -->
               <div class="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-sm font-display">
                 {d.nome.substring(0, 2)}
               </div>
@@ -201,44 +180,89 @@ const clientesLogos = [
     </div>
   </section>
 
-  <!-- 4. Seção Clientes Corporativos ("Quem já se protegeu conosco") -->
+  <!-- 4. Seção Clientes Corporativos (Quem já se protegeu conosco) -->
   <section id="clientes" class="bg-brand-light py-20 overflow-hidden relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <!-- Cabeçalho Clientes -->
       <div class="text-center space-y-4 max-w-3xl mx-auto">
         <span class="text-xs font-semibold tracking-wider text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full">
-          Grandes Projetos
+          Parcerias Comerciais
         </span>
         <h2 class="text-3xl md:text-4xl font-extrabold font-display text-brand-dark tracking-tight">
           Quem já se protegeu conosco
         </h2>
         <p class="text-base text-gray-600">
-          A Maufe Telas é a escolha de grandes construtoras, condomínios de alto padrão e clientes corporativos de referência no Mato Grosso do Sul.
+          Empresas, indústrias, instituições de ensino, órgãos públicos, bares e restaurantes que contam com a qualidade e segurança da Maufe Telas.
         </p>
       </div>
 
-      <!-- Marquee Horizontal Infinito de Logos -->
+      <!-- Marquee de Logos de Clientes (Aumentados e mais nítidos) -->
       <div class="flex overflow-hidden w-full relative z-10 select-none">
-        <div class="flex gap-12 items-center animate-marquee whitespace-nowrap hover:[animation-play-state:paused] py-4">
+        <div class="flex gap-10 items-center animate-marquee whitespace-nowrap hover:[animation-play-state:paused] py-4">
           {clientesLogos.map((logo) => (
-            <div class="inline-flex w-32 h-16 shrink-0 bg-white p-3 rounded-xl shadow-sm border border-gray-100/50 items-center justify-center group transition-all duration-300">
+            <div class="inline-flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 bg-white p-6 rounded-3xl shadow-md border border-gray-100 items-center justify-center group transition-all duration-300">
               <img 
                 src={logo.src} 
                 alt={logo.alt} 
                 title={logo.alt}
-                class="max-w-full max-h-full object-contain filter grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                class="max-w-full max-h-full object-contain filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
               />
             </div>
           ))}
           <!-- Duplicado para loop contínuo -->
           {clientesLogos.map((logo) => (
-            <div class="inline-flex w-32 h-16 shrink-0 bg-white p-3 rounded-xl shadow-sm border border-gray-100/50 items-center justify-center group transition-all duration-300">
+            <div class="inline-flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 bg-white p-6 rounded-3xl shadow-md border border-gray-100 items-center justify-center group transition-all duration-300">
               <img 
                 src={logo.src} 
                 alt={logo.alt} 
                 title={logo.alt}
-                class="max-w-full max-h-full object-contain filter grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                class="max-w-full max-h-full object-contain filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Seção Construtoras e Condomínios (Nova Seção Separada) -->
+  <section id="construtoras" class="bg-white py-20 overflow-hidden relative border-t border-gray-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-xs font-semibold tracking-wider text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full">
+          Grandes Obras
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-display text-brand-dark tracking-tight">
+          Construtoras e Condomínios atendidos
+        </h2>
+        <p class="text-base text-gray-600">
+          Já protegemos mais de uma centena de condomínios residenciais das principais construtoras e incorporadoras da região.
+        </p>
+      </div>
+
+      <!-- Marquee de Logos de Construtoras (Aumentados e mais nítidos) -->
+      <div class="flex overflow-hidden w-full relative z-10 select-none">
+        <div class="flex gap-10 items-center animate-marquee whitespace-nowrap hover:[animation-play-state:paused] py-4">
+          {construtorasLogos.map((logo) => (
+            <div class="inline-flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 bg-white p-6 rounded-3xl shadow-md border border-gray-100 items-center justify-center group transition-all duration-300">
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                title={logo.alt}
+                class="max-w-full max-h-full object-contain filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+              />
+            </div>
+          ))}
+          <!-- Duplicado para loop contínuo -->
+          {construtorasLogos.map((logo) => (
+            <div class="inline-flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 bg-white p-6 rounded-3xl shadow-md border border-gray-100 items-center justify-center group transition-all duration-300">
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                title={logo.alt}
+                class="max-w-full max-h-full object-contain filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
               />
             </div>
           ))}
@@ -261,20 +285,7 @@ const clientesLogos = [
     }
   }
 
-  @keyframes marquee-reverse {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
   .animate-marquee {
-    animation: marquee 35s linear infinite;
-  }
-
-  .animate-marquee-reverse {
-    animation: marquee-reverse 35s linear infinite;
+    animation: marquee 38s linear infinite;
   }
 </style>
