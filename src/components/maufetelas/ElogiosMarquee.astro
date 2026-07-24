@@ -1,0 +1,55 @@
+---
+const elogios = Array.from({ length: 23 }, (_, i) => `/referencias/elogios/${i + 1}.jpg`);
+---
+
+<section class="bg-brand-light py-20 overflow-hidden relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center space-y-4">
+    <span class="text-xs font-semibold tracking-wider text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full">
+      Feedback Real
+    </span>
+    <h2 class="text-3xl md:text-4xl font-extrabold font-display text-brand-dark tracking-tight">
+      Coleção de elogios
+    </h2>
+    <p class="text-base text-gray-600 max-w-2xl mx-auto">
+      Todos os dias tem alguém elogiando nosso trabalho, nosso atendimento e nossa equipe.
+    </p>
+  </div>
+
+  <!-- Marquise Infinita (Linha Única) -->
+  <div class="flex flex-col gap-6 relative z-10 select-none w-full">
+    <div class="flex overflow-hidden w-full relative">
+      <div class="flex gap-6 animate-marquee whitespace-nowrap hover:[animation-play-state:paused] py-2">
+        {elogios.map((src) => (
+          <div class="inline-block w-64 h-auto shrink-0 bg-white p-2 rounded-xl shadow-md border border-gray-100/50">
+            <img src={src} alt="Elogio de cliente" class="w-full h-auto object-cover rounded-lg pointer-events-none" />
+          </div>
+        ))}
+        <!-- Duplicado para loop infinito de rolagem suave -->
+        {elogios.map((src) => (
+          <div class="inline-block w-64 h-auto shrink-0 bg-white p-2 rounded-xl shadow-md border border-gray-100/50">
+            <img src={src} alt="Elogio de cliente" class="w-full h-auto object-cover rounded-lg pointer-events-none" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Gradientes de fade nas laterais -->
+  <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-brand-light to-transparent z-20 pointer-events-none"></div>
+  <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-brand-light to-transparent z-20 pointer-events-none"></div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 38s linear infinite;
+  }
+</style>

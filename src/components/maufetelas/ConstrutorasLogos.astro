@@ -1,0 +1,70 @@
+---
+const construtorasLogos = [
+  { src: "/referencias/condominios/Damha.jpg.webp", alt: "Damha" },
+  { src: "/referencias/condominios/Plaenge.jpg.webp", alt: "Plaenge" },
+  { src: "/referencias/condominios/Vanguard2.jpg.webp", alt: "Vanguard" },
+  { src: "/referencias/condominios/Alphaville2.jpg.webp", alt: "Alphaville" },
+  { src: "/referencias/condominios/MRV.jpg.webp", alt: "MRV" },
+  { src: "/referencias/condominios/Tecol.jpg.webp", alt: "Tecol" }
+];
+---
+
+<section id="construtoras" class="bg-white py-20 overflow-hidden relative border-t border-gray-100/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <div class="text-center space-y-4 max-w-3xl mx-auto">
+      <span class="text-xs font-semibold tracking-wider text-brand-blue uppercase bg-brand-blue/10 px-3 py-1 rounded-full">
+        Grandes Obras
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold font-display text-brand-dark tracking-tight">
+        Construtoras e Condomínios atendidos
+      </h2>
+      <p class="text-base text-gray-600">
+        Já protegemos mais de uma centena de condomínios residenciais das principais construtoras e incorporadoras da região.
+      </p>
+    </div>
+
+    <!-- Marquee de Logos de Construtoras -->
+    <div class="flex overflow-hidden w-full relative z-10 select-none">
+      <div class="flex gap-10 items-center animate-marquee whitespace-nowrap hover:[animation-play-state:paused] py-4">
+        {construtorasLogos.map((logo) => (
+          <div class="inline-flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 bg-white p-6 rounded-3xl shadow-md border border-gray-100 items-center justify-center group transition-all duration-300">
+            <img 
+              src={logo.src} 
+              alt={logo.alt} 
+              title={logo.alt}
+              class="max-w-full max-h-full object-contain filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+        ))}
+        <!-- Duplicado para loop contínuo -->
+        {construtorasLogos.map((logo) => (
+          <div class="inline-flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 bg-white p-6 rounded-3xl shadow-md border border-gray-100 items-center justify-center group transition-all duration-300">
+            <img 
+              src={logo.src} 
+              alt={logo.alt} 
+              title={logo.alt}
+              class="max-w-full max-h-full object-contain filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 38s linear infinite;
+  }
+</style>
